@@ -2370,6 +2370,7 @@ Transform:
   - {fileID: 1038952190}
   - {fileID: 1838547665}
   - {fileID: 2050699993}
+  - {fileID: 1115414210}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!95 &955280292
@@ -2447,6 +2448,101 @@ MonoBehaviour:
   m_LegacyPriority: 0
   Target:
     TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
+--- !u!1 &981648658
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 981648659}
+  - component: {fileID: 981648661}
+  - component: {fileID: 981648660}
+  m_Layer: 0
+  m_Name: Rocket_Follow
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &981648659
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981648658}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0.022867588, y: 0.33921027, z: -0.008241474, w: 0.94039655}
+  m_LocalPosition: {x: 4.14, y: 500.00708, z: 9.809999}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 1537704476}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &981648660
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981648658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617507da6d07e749b7efdb34e1173e1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TrackerSettings:
+    BindingMode: 4
+    PositionDamping: {x: 1, y: 1, z: 1}
+    AngularDampingMode: 0
+    RotationDamping: {x: 1, y: 1, z: 1}
+    QuaternionDamping: 1
+  FollowOffset: {x: 0, y: 0, z: -10}
+--- !u!114 &981648661
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 981648658}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 955280291}
     LookAtTarget: {fileID: 0}
     CustomLookAtTarget: 0
   Lens:
@@ -2933,6 +3029,99 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1115414209
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1115414210}
+  - component: {fileID: 1115414212}
+  - component: {fileID: 1115414211}
+  m_Layer: 0
+  m_Name: Rocket_Embark
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1115414210
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115414209}
+  serializedVersion: 2
+  m_LocalRotation: {x: -0.60499626, y: 0.29719096, z: -0.25997603, w: -0.69142574}
+  m_LocalPosition: {x: -0.3983414, y: 3.8517594, z: 0.32419485}
+  m_LocalScale: {x: 0.2502252, y: 0.25022522, z: 0.25022522}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 955280291}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1115414211
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115414209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68bb026fafb42b14791938953eaace77, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  NoiseProfile: {fileID: 11400000, guid: 69ce8388f6785dd4c8c39915efece2f4, type: 2}
+  PivotOffset: {x: 0, y: 0, z: 0}
+  AmplitudeGain: 1
+  FrequencyGain: 1
+  m_NoiseOffsets: {x: 0, y: 0, z: 0}
+--- !u!114 &1115414212
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1115414209}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dfa5b682dcd46bda6128250e975f58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
+  m_StreamingVersion: 20241001
+  m_LegacyPriority: 0
+  Target:
+    TrackingTarget: {fileID: 0}
+    LookAtTarget: {fileID: 0}
+    CustomLookAtTarget: 0
+  Lens:
+    FieldOfView: 60.000004
+    OrthographicSize: 5
+    NearClipPlane: 0.3
+    FarClipPlane: 1000
+    Dutch: 0
+    ModeOverride: 0
+    PhysicalProperties:
+      GateFit: 2
+      SensorSize: {x: 21.946, y: 16.002}
+      LensShift: {x: 0, y: 0}
+      FocusDistance: 10
+      Iso: 200
+      ShutterSpeed: 0.005
+      Aperture: 16
+      BladeCount: 5
+      Curvature: {x: 2, y: 11}
+      BarrelClipping: 0.25
+      Anamorphism: 0
+  BlendHint: 0
 --- !u!4 &1120407766 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 3e752cc5a9b5cf145abf1c9304ebed92, type: 3}
@@ -3306,7 +3495,7 @@ GameObject:
   - component: {fileID: 1425893082}
   - component: {fileID: 1425893083}
   m_Layer: 0
-  m_Name: Rocket_Follow
+  m_Name: Rocket_LookAt
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3320,7 +3509,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1425893080}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.02083641, y: 0, z: 0, w: 0.9997829}
+  m_LocalRotation: {x: -0.7001104, y: 0, z: 0, w: 0.7140347}
   m_LocalPosition: {x: 4.14, y: -7.742, z: 9.809999}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -3422,6 +3611,7 @@ Transform:
   - {fileID: 2041622083}
   - {fileID: 956635884}
   - {fileID: 1425893081}
+  - {fileID: 981648659}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1561001007
@@ -3435,6 +3625,7 @@ GameObject:
   - component: {fileID: 1561001009}
   - component: {fileID: 1561001008}
   - component: {fileID: 1561001010}
+  - component: {fileID: 1561001011}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3545,6 +3736,20 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+--- !u!114 &1561001011
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1561001007}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6fe1b8bdc4871a246b09d993d052bee8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _directionnalLight: {fileID: 1561001008}
+  _fadeStrength: 0.001
 --- !u!1 &1616018930
 GameObject:
   m_ObjectHideFlags: 0
@@ -9369,6 +9574,10 @@ PlayableDirector:
     value: {fileID: 955280292}
   - key: {fileID: -1930518974834667224, guid: f2324e22559680a4688913aeef97dc7c, type: 2}
     value: {fileID: 2050699992}
+  - key: {fileID: -2830724384316296836, guid: f2324e22559680a4688913aeef97dc7c, type: 2}
+    value: {fileID: 2108855638}
+  - key: {fileID: 1945850184110823711, guid: f2324e22559680a4688913aeef97dc7c, type: 2}
+    value: {fileID: 1660336044}
   m_ExposedReferences:
     m_References:
     - a104c56eb4e57df458647d52b625adbe: {fileID: 1100790912}
@@ -9379,6 +9588,7 @@ PlayableDirector:
     - 731b45d227a33554c957cc42add733ef: {fileID: 1951411702}
     - 629b1e2ef54b3ad4fbe9665de139ca93: {fileID: 1310981024}
     - a6e063a7f68b28745a70fc4ae81a0b85: {fileID: 1310981024}
+    - 99b6d34f3bd91304f89c04acc5777624: {fileID: 981648661}
     - 6371dffec48d39540bb5a240faac27cd: {fileID: 443800940}
     - b0646c290b30de343845ce38faead16a: {fileID: 1425893082}
     - 563c76640037bd0478b67c3124f697ef: {fileID: 594813502}
@@ -9386,6 +9596,7 @@ PlayableDirector:
     - 9f67014a3fcd21f4eb2bffc35aeca84d: {fileID: 2041622084}
     - 50d155027a2adaf4dbf8311d7348a365: {fileID: 2041622084}
     - 9d0c10019e19a1244a17710720e23c75: {fileID: 730834446}
+    - 39c72b934d288e1469a08596e6226c9c: {fileID: 1561001007}
     - e0cc84b7dfdbb64459512619a07763fd: {fileID: 443800940}
     - 46a2d5ef86e3cb14db495ab916955f9c: {fileID: 1409903249}
     - 99012448e1ec7df4292d8a4cae84df0e: {fileID: 1951411702}
@@ -9393,6 +9604,7 @@ PlayableDirector:
     - 292fa25b07df4c849be4e2db4db42072: {fileID: 956635885}
     - 34f2875f0adb88e4c931a21ae386c4d6: {fileID: 443800940}
     - 0e3584b6bbfaee24587c103430bd506b: {fileID: 1381321420}
+    - 0b722a47c52565d43bede6be9e12e38a: {fileID: 1115414212}
 --- !u!4 &2108855637
 Transform:
   m_ObjectHideFlags: 0
@@ -9424,6 +9636,7 @@ MonoBehaviour:
     m_Signals:
     - {fileID: 11400000, guid: 68354922e29621949bcaf02f9cf7b6dc, type: 2}
     - {fileID: 11400000, guid: bb900ec661cabc74d880e16ef861101f, type: 2}
+    - {fileID: 11400000, guid: 433f0d317f0f1694baaaaf446ab4fa17, type: 2}
     m_Events:
     - m_PersistentCalls:
         m_Calls:
@@ -9444,6 +9657,20 @@ MonoBehaviour:
         - m_Target: {fileID: 603254526}
           m_TargetAssemblyTypeName: CCTV, Assembly-CSharp
           m_MethodName: SwapBlendToCut
+          m_Mode: 1
+          m_Arguments:
+            m_ObjectArgument: {fileID: 0}
+            m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+            m_IntArgument: 0
+            m_FloatArgument: 0
+            m_StringArgument: 
+            m_BoolArgument: 0
+          m_CallState: 2
+    - m_PersistentCalls:
+        m_Calls:
+        - m_Target: {fileID: 1561001011}
+          m_TargetAssemblyTypeName: LightControll, Assembly-CSharp
+          m_MethodName: StarLightFadeOut
           m_Mode: 1
           m_Arguments:
             m_ObjectArgument: {fileID: 0}
