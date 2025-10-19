@@ -7,15 +7,27 @@ public class LightControll : MonoBehaviour
 
     bool _fadeOut = false;
     float t = 0f;
+    float _initialIntensity;
 
     private void Awake()
     {
         TryGetComponent(out  _directionnalLight);
+        _initialIntensity = _directionnalLight.intensity;
     }
 
     public void StarLightFadeOut()
     {
         _fadeOut = true;
+    }
+
+    public void ActivateLight()
+    {
+        _directionnalLight.intensity = _initialIntensity;
+    }
+
+    public void DeactivateLight()
+    {
+        _directionnalLight.intensity = 0;
     }
 
     private void Update()
@@ -25,6 +37,6 @@ public class LightControll : MonoBehaviour
 
         t += _fadeStrength * Time.deltaTime;
 
-        _directionnalLight.intensity = Mathf.Lerp(_directionnalLight.intensity, 0f, t);
+        _directionnalLight.intensity = Mathf.Lerp(_initialIntensity, 0f, t);
     }
 }
